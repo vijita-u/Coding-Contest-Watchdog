@@ -26,12 +26,11 @@ response
 		let contest_platform = new Array();
 
 		for (contests of value) {
-			contest_platform.push(contests["site"]);
-
 			let randIndex = Math.floor(Math.random() * coding_images.length);
 			let image_url = coding_images[randIndex];
 
 			if (contests["status"] == "BEFORE") {
+				contest_platform.push(contests["site"]);
 				cardContents = `<div class="card my-2 mx-2">
             <img src=${image_url} width="100%" height="200px" alt="Coding Picture">
             <h6 class="card-title">${contests["name"]}</h6>
