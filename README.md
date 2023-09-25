@@ -34,8 +34,6 @@ Coding Contest Watchdog is a web application designed to deliver live updates on
 - JavaScript
 - Bootstrap
 
-## Challenges Faced 
-
 ## Acknowledgments
 
 This project idea was inspired by [CodeWithHarry](https://www.codewithharry.com/). Special thanks to him for putting out amazing content out there.
