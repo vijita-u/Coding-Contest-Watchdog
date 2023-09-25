@@ -9,7 +9,7 @@ Coding Contest Watchdog is a web application designed to deliver live updates on
 
 ## Features
 
-- Real-time updates: The application uses AJAX requests to keep the contest information up to date.
+- Real-time updates: The application uses Fetch API to keep the contest information up to date.
 - Responsive design: Built with Bootstrap, the user interface adapts seamlessly to different screen sizes.
 - User-friendly interface: Search bar that dynamically updates contest details on each keystroke and a clear contest details presentation.
 
