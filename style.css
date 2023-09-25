@@ -1,121 +1,175 @@
 html {
-    font-size: 16px;
+	font-size: 1rem;
 }
 
 :root {
-    --primary-color: #A020F0;
-    --text-color: #000;
+	--primary-color: #a020f0;
+	--text-color: #000;
+	--secondary-color: #fff;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;   
+	font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
-nav, .hero-image, .card-container {
-    margin-inline: auto !important;
-    padding-inline: 30px !important;
-    width: 80%;
+nav,
+.hero-image,
+.card-container {
+	margin-inline: auto !important;
+	padding-inline: 1.875rem !important;
+	width: 80%;
 }
 
 nav {
-    border-radius: 0 0 5px 5px !important;
-    padding-inline: 10px !important;
-    height: auto;
+	border-radius: 0 0 0.3125rem 0.3125rem !important;
+	padding-inline: 0.625rem !important;
+	height: auto;
 }
 
 .navbar-brand {
-    text-transform: uppercase !important;
-    color: var(--primary-color);
-    font-weight: 600;
-    letter-spacing: 1.2pt;
-    white-space: wrap;
+	text-transform: uppercase !important;
+	color: var(--primary-color);
+	font-weight: 600;
+	letter-spacing: 1.2pt;
+	white-space: wrap;
+	text-align: center;
+	cursor: default;
 }
 
 .container-fluid {
-    width: 80%;
-    margin-inline: auto;
+	width: 80%;
+	margin-inline: auto;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+.me-2 {
+	background-color: rgb(194, 190, 190);
 }
 
 .hero-image {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    object-fit: contain;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    border-radius: 5px;
+	position: relative;
+	height: 18.75rem;
+	overflow: hidden;
+	object-fit: contain;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: var(--text-color);
+	border-radius: 5px;
 }
 
 .hero-image::before {
-    content: "";
-    background: url("https://cosmosgroup.sgp1.cdn.digitaloceanspaces.com/news/9608604.webp");
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0.4;
+	content: "";
+	background: url("https://cosmosgroup.sgp1.cdn.digitaloceanspaces.com/news/9608604.webp");
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0.4;
 }
 
-#hero-main-text, #hero-sub-text {
-    position: relative;
+#hero-main-text,
+#hero-sub-text {
+	position: relative;
 }
 
 #hero-main-text {
-    text-transform: uppercase;
-    letter-spacing: 2pt;
-    padding-bottom: 20px;
-    text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2pt;
+	padding-bottom: 1.25rem;
+}
+
+form {
+	position: relative;
+}
+
+#search-box {
+	height: 2.375rem;
+}
+
+#autocomplete {
+	background-color: var(--secondary-color);
+	position: absolute;
+	top: 2.375rem;
+	border-radius: 0.375rem;
+	width: 98%;
+}
+
+.autocomplete_list {
+	list-style: none;
+	line-height: 1.2;
+	padding: 0.625rem;
+	border-top: 1px solid lightgray;
+	transition: all 200ms ease-in-out;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type="search"]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="search"]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
 }
 
 .card-container {
-    padding: 20px 20px;
-    display: flex;
-    flex-wrap: wrap;
+	padding: 1.25rem;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .card-title {
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    color: var(--primary-color);
-    margin: unset;
-    padding-top: 10px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: center;
+	color: var(--primary-color);
+	margin: unset;
+	padding-top: 0.625rem;
 }
 
 #contest-cards {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .card {
-    width: 18rem; 
-    padding: 10px;
-    position: relative;
-    justify-content: space-between;
+	width: 18rem;
+	padding: 0.625rem;
+	position: relative;
+	justify-content: space-between;
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
 
+@media (min-width: 54.375rem) {
+	.container-fluid {
+		justify-content: space-between !important;
+	}
+}
 
-@media (max-width: 500px) {
+@media (max-width: 31.25rem) {
+	#search-box {
+		margin-bottom: 0.625rem;
+	}
 
-    nav form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #search-box {
-        margin-bottom: 10px;
-    }
-
-    #hero-main-text {
-        letter-spacing: unset;
-        color: #fff;
-    }
+	#hero-main-text {
+		letter-spacing: unset;
+		color: var(--secondary-color);
+	}
 }
